@@ -3,28 +3,28 @@
 # Material Palenight scheme by Nate Peterson
 
 function base16-material-palenight -d "Material Palenight"
-  set color00 29/2D/3E # Base 00 - Black
-  set color01 F0/71/78 # Base 08 - Red
-  set color02 C3/E8/8D # Base 0B - Green
-  set color03 FF/CB/6B # Base 0A - Yellow
-  set color04 82/AA/FF # Base 0D - Blue
-  set color05 C7/92/EA # Base 0E - Magenta
-  set color06 89/DD/FF # Base 0C - Cyan
-  set color07 95/9D/CB # Base 05 - White
-  set color08 67/6E/95 # Base 03 - Bright Black
+  set color00 29/2d/3e # Base 00 - Black
+  set color01 f0/71/78 # Base 08 - Red
+  set color02 c3/e8/8d # Base 0B - Green
+  set color03 ff/cb/6b # Base 0A - Yellow
+  set color04 82/aa/ff # Base 0D - Blue
+  set color05 c7/92/ea # Base 0E - Magenta
+  set color06 89/dd/ff # Base 0C - Cyan
+  set color07 95/9d/cb # Base 05 - White
+  set color08 67/6e/95 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 FF/FF/FF # Base 07 - Bright White
-  set color16 F7/8C/6C # Base 09
-  set color17 FF/53/70 # Base 0F
+  set color15 ff/ff/ff # Base 07 - Bright White
+  set color16 f7/8c/6c # Base 09
+  set color17 ff/53/70 # Base 0F
   set color18 44/42/67 # Base 01
-  set color19 32/37/4D # Base 02
-  set color20 87/96/B0 # Base 04
-  set color21 95/9D/CB # Base 06
+  set color19 32/37/4d # Base 02
+  set color20 87/96/b0 # Base 04
+  set color21 95/9d/cb # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-material-palenight -d "Material Palenight"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg 959DCB # foreground
-    put_template_custom Ph 292D3E # background
-    put_template_custom Pi 959DCB # bold color
-    put_template_custom Pj 32374D # selection color
-    put_template_custom Pk 959DCB # selected text color
-    put_template_custom Pl 959DCB # cursor
-    put_template_custom Pm 292D3E # cursor text
+    put_template_custom Pg 959dcb # foreground
+    put_template_custom Ph 292d3e # background
+    put_template_custom Pi 959dcb # bold color
+    put_template_custom Pj 32374d # selection color
+    put_template_custom Pk 959dcb # selected text color
+    put_template_custom Pl 959dcb # cursor
+    put_template_custom Pm 292d3e # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-material-palenight -d "Material Palenight"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 32374D
+  set -U fish_color_autosuggestion 32374d
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 32374D
+  set -U fish_color_comment 32374d
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-material-palenight -d "Material Palenight"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 8796B0
+  set -U fish_color_param 8796b0
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=32374D
-  set -U fish_color_selection white --bold --background=32374D
+  set -U fish_color_search_match bryellow --background=32374d
+  set -U fish_color_selection white --bold --background=32374d
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -126,6 +126,10 @@ function base16-material-palenight -d "Material Palenight"
 
   # remember current theme
   set -U base16_theme material-palenight
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "29" "2d" "3e"
+  __base16_fish_shell_create_vimrc_background material-palenight
 
   # clean up
   functions -e put_template put_template_var put_template_custom

@@ -4,12 +4,12 @@
 
 function base16-google-dark -d "Google Dark"
   set color00 1d/1f/21 # Base 00 - Black
-  set color01 CC/34/2B # Base 08 - Red
+  set color01 cc/34/2b # Base 08 - Red
   set color02 19/88/44 # Base 0B - Green
-  set color03 FB/A9/22 # Base 0A - Yellow
-  set color04 39/71/ED # Base 0D - Blue
-  set color05 A3/6A/C7 # Base 0E - Magenta
-  set color06 39/71/ED # Base 0C - Cyan
+  set color03 fb/a9/22 # Base 0A - Yellow
+  set color04 39/71/ed # Base 0D - Blue
+  set color05 a3/6a/c7 # Base 0E - Magenta
+  set color06 39/71/ed # Base 0C - Cyan
   set color07 c5/c8/c6 # Base 05 - White
   set color08 96/98/96 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
@@ -19,8 +19,8 @@ function base16-google-dark -d "Google Dark"
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
   set color15 ff/ff/ff # Base 07 - Bright White
-  set color16 F9/6A/38 # Base 09
-  set color17 39/71/ED # Base 0F
+  set color16 f9/6a/38 # Base 09
+  set color17 39/71/ed # Base 0F
   set color18 28/2a/2e # Base 01
   set color19 37/3b/41 # Base 02
   set color20 b4/b7/b4 # Base 04
@@ -126,6 +126,10 @@ function base16-google-dark -d "Google Dark"
 
   # remember current theme
   set -U base16_theme google-dark
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "1d" "1f" "21"
+  __base16_fish_shell_create_vimrc_background google-dark
 
   # clean up
   functions -e put_template put_template_var put_template_custom

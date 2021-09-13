@@ -127,6 +127,10 @@ function base16-harmonic-light -d "Harmonic16 Light"
   # remember current theme
   set -U base16_theme harmonic-light
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "f7" "f9" "fb"
+  __base16_fish_shell_create_vimrc_background harmonic-light
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

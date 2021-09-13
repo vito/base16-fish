@@ -127,6 +127,10 @@ function base16-shades-of-purple -d "Shades of Purple"
   # remember current theme
   set -U base16_theme shades-of-purple
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "1e" "1e" "3f"
+  __base16_fish_shell_create_vimrc_background shades-of-purple
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

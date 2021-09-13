@@ -127,6 +127,10 @@ function base16-papercolor-light -d "PaperColor Light"
   # remember current theme
   set -U base16_theme papercolor-light
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "ee" "ee" "ee"
+  __base16_fish_shell_create_vimrc_background papercolor-light
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

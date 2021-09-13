@@ -21,7 +21,7 @@ function base16-windows-highcontrast -d "Windows High Contrast"
   set color15 fc/fc/fc # Base 07 - Bright White
   set color16 80/80/00 # Base 09
   set color17 00/80/00 # Base 0F
-  set color18 1C/1C/1C # Base 01
+  set color18 1c/1c/1c # Base 01
   set color19 38/38/38 # Base 02
   set color20 a2/a2/a2 # Base 04
   set color21 de/de/de # Base 06
@@ -126,6 +126,10 @@ function base16-windows-highcontrast -d "Windows High Contrast"
 
   # remember current theme
   set -U base16_theme windows-highcontrast
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "00" "00" "00"
+  __base16_fish_shell_create_vimrc_background windows-highcontrast
 
   # clean up
   functions -e put_template put_template_var put_template_custom

@@ -127,6 +127,10 @@ function base16-windows-10 -d "Windows 10"
   # remember current theme
   set -U base16_theme windows-10
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "0c" "0c" "0c"
+  __base16_fish_shell_create_vimrc_background windows-10
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

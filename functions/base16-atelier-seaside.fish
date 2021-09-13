@@ -127,6 +127,10 @@ function base16-atelier-seaside -d "Atelier Seaside"
   # remember current theme
   set -U base16_theme atelier-seaside
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "13" "15" "13"
+  __base16_fish_shell_create_vimrc_background atelier-seaside
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

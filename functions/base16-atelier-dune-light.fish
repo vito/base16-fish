@@ -127,6 +127,10 @@ function base16-atelier-dune-light -d "Atelier Dune Light"
   # remember current theme
   set -U base16_theme atelier-dune-light
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "fe" "fb" "ec"
+  __base16_fish_shell_create_vimrc_background atelier-dune-light
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

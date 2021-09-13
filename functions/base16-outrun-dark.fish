@@ -3,28 +3,28 @@
 # Outrun Dark scheme by Hugo Delahousse (http://github.com/hugodelahousse/)
 
 function base16-outrun-dark -d "Outrun Dark"
-  set color00 00/00/2A # Base 00 - Black
-  set color01 FF/42/42 # Base 08 - Red
-  set color02 59/F1/76 # Base 0B - Green
-  set color03 F3/E8/77 # Base 0A - Yellow
-  set color04 66/B0/FF # Base 0D - Blue
-  set color05 F1/05/96 # Base 0E - Magenta
-  set color06 0E/F0/F0 # Base 0C - Cyan
-  set color07 D0/D0/FA # Base 05 - White
-  set color08 50/50/7A # Base 03 - Bright Black
+  set color00 00/00/2a # Base 00 - Black
+  set color01 ff/42/42 # Base 08 - Red
+  set color02 59/f1/76 # Base 0B - Green
+  set color03 f3/e8/77 # Base 0A - Yellow
+  set color04 66/b0/ff # Base 0D - Blue
+  set color05 f1/05/96 # Base 0E - Magenta
+  set color06 0e/f0/f0 # Base 0C - Cyan
+  set color07 d0/d0/fa # Base 05 - White
+  set color08 50/50/7a # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 F5/F5/FF # Base 07 - Bright White
-  set color16 FC/8D/28 # Base 09
-  set color17 F0/03/EF # Base 0F
-  set color18 20/20/4A # Base 01
-  set color19 30/30/5A # Base 02
-  set color20 B0/B0/DA # Base 04
-  set color21 E0/E0/FF # Base 06
+  set color15 f5/f5/ff # Base 07 - Bright White
+  set color16 fc/8d/28 # Base 09
+  set color17 f0/03/ef # Base 0F
+  set color18 20/20/4a # Base 01
+  set color19 30/30/5a # Base 02
+  set color20 b0/b0/da # Base 04
+  set color21 e0/e0/ff # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-outrun-dark -d "Outrun Dark"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg D0D0FA # foreground
-    put_template_custom Ph 00002A # background
-    put_template_custom Pi D0D0FA # bold color
-    put_template_custom Pj 30305A # selection color
-    put_template_custom Pk D0D0FA # selected text color
-    put_template_custom Pl D0D0FA # cursor
-    put_template_custom Pm 00002A # cursor text
+    put_template_custom Pg d0d0fa # foreground
+    put_template_custom Ph 00002a # background
+    put_template_custom Pi d0d0fa # bold color
+    put_template_custom Pj 30305a # selection color
+    put_template_custom Pk d0d0fa # selected text color
+    put_template_custom Pl d0d0fa # cursor
+    put_template_custom Pm 00002a # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-outrun-dark -d "Outrun Dark"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 30305A
+  set -U fish_color_autosuggestion 30305a
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 30305A
+  set -U fish_color_comment 30305a
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-outrun-dark -d "Outrun Dark"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param B0B0DA
+  set -U fish_color_param b0b0da
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=30305A
-  set -U fish_color_selection white --bold --background=30305A
+  set -U fish_color_search_match bryellow --background=30305a
+  set -U fish_color_selection white --bold --background=30305a
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -126,6 +126,10 @@ function base16-outrun-dark -d "Outrun Dark"
 
   # remember current theme
   set -U base16_theme outrun-dark
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "00" "00" "2a"
+  __base16_fish_shell_create_vimrc_background outrun-dark
 
   # clean up
   functions -e put_template put_template_var put_template_custom

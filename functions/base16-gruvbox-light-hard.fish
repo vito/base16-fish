@@ -127,6 +127,10 @@ function base16-gruvbox-light-hard -d "Gruvbox light, hard"
   # remember current theme
   set -U base16_theme gruvbox-light-hard
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "f9" "f5" "d7"
+  __base16_fish_shell_create_vimrc_background gruvbox-light-hard
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

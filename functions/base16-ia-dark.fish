@@ -127,6 +127,10 @@ function base16-ia-dark -d "iA Dark"
   # remember current theme
   set -U base16_theme ia-dark
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "1a" "1a" "1a"
+  __base16_fish_shell_create_vimrc_background ia-dark
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

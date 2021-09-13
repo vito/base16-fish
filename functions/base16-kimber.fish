@@ -4,13 +4,13 @@
 
 function base16-kimber -d "Kimber"
   set color00 22/22/22 # Base 00 - Black
-  set color01 C8/8C/8C # Base 08 - Red
-  set color02 99/C8/99 # Base 0B - Green
-  set color03 D8/B5/6D # Base 0A - Yellow
-  set color04 53/7C/9C # Base 0D - Blue
-  set color05 86/CA/CD # Base 0E - Magenta
-  set color06 78/B4/B4 # Base 0C - Cyan
-  set color07 DE/DE/E7 # Base 05 - White
+  set color01 c8/8c/8c # Base 08 - Red
+  set color02 99/c8/99 # Base 0B - Green
+  set color03 d8/b5/6d # Base 0A - Yellow
+  set color04 53/7c/9c # Base 0D - Blue
+  set color05 86/ca/cd # Base 0E - Magenta
+  set color06 78/b4/b4 # Base 0C - Cyan
+  set color07 de/de/e7 # Base 05 - White
   set color08 64/46/46 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
@@ -18,13 +18,13 @@ function base16-kimber -d "Kimber"
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 FF/FF/E6 # Base 07 - Bright White
-  set color16 47/6C/88 # Base 09
-  set color17 70/4F/4F # Base 0F
+  set color15 ff/ff/e6 # Base 07 - Bright White
+  set color16 47/6c/88 # Base 09
+  set color17 70/4f/4f # Base 0F
   set color18 31/31/31 # Base 01
-  set color19 55/5D/55 # Base 02
-  set color20 5A/5A/5A # Base 04
-  set color21 C3/C3/B4 # Base 06
+  set color19 55/5d/55 # Base 02
+  set color20 5a/5a/5a # Base 04
+  set color21 c3/c3/b4 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,12 +78,12 @@ function base16-kimber -d "Kimber"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg DEDEE7 # foreground
+    put_template_custom Pg dedee7 # foreground
     put_template_custom Ph 222222 # background
-    put_template_custom Pi DEDEE7 # bold color
-    put_template_custom Pj 555D55 # selection color
-    put_template_custom Pk DEDEE7 # selected text color
-    put_template_custom Pl DEDEE7 # cursor
+    put_template_custom Pi dedee7 # bold color
+    put_template_custom Pj 555d55 # selection color
+    put_template_custom Pk dedee7 # selected text color
+    put_template_custom Pl dedee7 # cursor
     put_template_custom Pm 222222 # cursor text
   else
     put_template_var 10 $colorfg
@@ -97,10 +97,10 @@ function base16-kimber -d "Kimber"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 555D55
+  set -U fish_color_autosuggestion 555d55
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 555D55
+  set -U fish_color_comment 555d55
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-kimber -d "Kimber"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 5A5A5A
+  set -U fish_color_param 5a5a5a
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=555D55
-  set -U fish_color_selection white --bold --background=555D55
+  set -U fish_color_search_match bryellow --background=555d55
+  set -U fish_color_selection white --bold --background=555d55
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -126,6 +126,10 @@ function base16-kimber -d "Kimber"
 
   # remember current theme
   set -U base16_theme kimber
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "22" "22" "22"
+  __base16_fish_shell_create_vimrc_background kimber
 
   # clean up
   functions -e put_template put_template_var put_template_custom

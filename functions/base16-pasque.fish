@@ -3,28 +3,28 @@
 # Pasque scheme by Gabriel Fontes (https://github.com/Misterio77)
 
 function base16-pasque -d "Pasque"
-  set color00 27/1C/3A # Base 00 - Black
-  set color01 A9/22/58 # Base 08 - Red
-  set color02 C6/91/4B # Base 0B - Green
+  set color00 27/1c/3a # Base 00 - Black
+  set color01 a9/22/58 # Base 08 - Red
+  set color02 c6/91/4b # Base 0B - Green
   set color03 80/4e/ad # Base 0A - Yellow
-  set color04 8E/7D/C6 # Base 0D - Blue
-  set color05 95/3B/9D # Base 0E - Magenta
-  set color06 72/63/AA # Base 0C - Cyan
-  set color07 DE/DC/DF # Base 05 - White
-  set color08 5D/57/66 # Base 03 - Bright Black
+  set color04 8e/7d/c6 # Base 0D - Blue
+  set color05 95/3b/9d # Base 0E - Magenta
+  set color06 72/63/aa # Base 0C - Cyan
+  set color07 de/dc/df # Base 05 - White
+  set color08 5d/57/66 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 BB/AA/DD # Base 07 - Bright White
+  set color15 bb/aa/dd # Base 07 - Bright White
   set color16 91/88/89 # Base 09
-  set color17 59/32/5C # Base 0F
+  set color17 59/32/5c # Base 0F
   set color18 10/03/23 # Base 01
-  set color19 3E/2D/5C # Base 02
-  set color20 BE/BC/BF # Base 04
-  set color21 ED/EA/EF # Base 06
+  set color19 3e/2d/5c # Base 02
+  set color20 be/bc/bf # Base 04
+  set color21 ed/ea/ef # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-pasque -d "Pasque"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg DEDCDF # foreground
-    put_template_custom Ph 271C3A # background
-    put_template_custom Pi DEDCDF # bold color
-    put_template_custom Pj 3E2D5C # selection color
-    put_template_custom Pk DEDCDF # selected text color
-    put_template_custom Pl DEDCDF # cursor
-    put_template_custom Pm 271C3A # cursor text
+    put_template_custom Pg dedcdf # foreground
+    put_template_custom Ph 271c3a # background
+    put_template_custom Pi dedcdf # bold color
+    put_template_custom Pj 3e2d5c # selection color
+    put_template_custom Pk dedcdf # selected text color
+    put_template_custom Pl dedcdf # cursor
+    put_template_custom Pm 271c3a # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-pasque -d "Pasque"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 3E2D5C
+  set -U fish_color_autosuggestion 3e2d5c
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 3E2D5C
+  set -U fish_color_comment 3e2d5c
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-pasque -d "Pasque"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param BEBCBF
+  set -U fish_color_param bebcbf
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=3E2D5C
-  set -U fish_color_selection white --bold --background=3E2D5C
+  set -U fish_color_search_match bryellow --background=3e2d5c
+  set -U fish_color_selection white --bold --background=3e2d5c
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -126,6 +126,10 @@ function base16-pasque -d "Pasque"
 
   # remember current theme
   set -U base16_theme pasque
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "27" "1c" "3a"
+  __base16_fish_shell_create_vimrc_background pasque
 
   # clean up
   functions -e put_template put_template_var put_template_custom

@@ -127,6 +127,10 @@ function base16-atelier-dune -d "Atelier Dune"
   # remember current theme
   set -U base16_theme atelier-dune
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "20" "20" "1d"
+  __base16_fish_shell_create_vimrc_background atelier-dune
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

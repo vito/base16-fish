@@ -127,6 +127,10 @@ function base16-onedark -d "OneDark"
   # remember current theme
   set -U base16_theme onedark
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "28" "2c" "34"
+  __base16_fish_shell_create_vimrc_background onedark
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

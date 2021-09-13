@@ -127,6 +127,10 @@ function base16-synth-midnight-light -d "Synth Midnight Terminal Light"
   # remember current theme
   set -U base16_theme synth-midnight-light
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "dd" "df" "e0"
+  __base16_fish_shell_create_vimrc_background synth-midnight-light
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

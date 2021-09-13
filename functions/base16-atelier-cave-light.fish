@@ -127,6 +127,10 @@ function base16-atelier-cave-light -d "Atelier Cave Light"
   # remember current theme
   set -U base16_theme atelier-cave-light
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "ef" "ec" "f4"
+  __base16_fish_shell_create_vimrc_background atelier-cave-light
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

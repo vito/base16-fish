@@ -3,7 +3,7 @@
 # Mocha scheme by Chris Kempson (http://chriskempson.com)
 
 function base16-mocha -d "Mocha"
-  set color00 3B/32/28 # Base 00 - Black
+  set color00 3b/32/28 # Base 00 - Black
   set color01 cb/60/77 # Base 08 - Red
   set color02 be/b5/5b # Base 0B - Green
   set color03 f4/bc/87 # Base 0A - Yellow
@@ -79,12 +79,12 @@ function base16-mocha -d "Mocha"
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
     put_template_custom Pg d0c8c6 # foreground
-    put_template_custom Ph 3B3228 # background
+    put_template_custom Ph 3b3228 # background
     put_template_custom Pi d0c8c6 # bold color
     put_template_custom Pj 645240 # selection color
     put_template_custom Pk d0c8c6 # selected text color
     put_template_custom Pl d0c8c6 # cursor
-    put_template_custom Pm 3B3228 # cursor text
+    put_template_custom Pm 3b3228 # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -126,6 +126,10 @@ function base16-mocha -d "Mocha"
 
   # remember current theme
   set -U base16_theme mocha
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "3b" "32" "28"
+  __base16_fish_shell_create_vimrc_background mocha
 
   # clean up
   functions -e put_template put_template_var put_template_custom

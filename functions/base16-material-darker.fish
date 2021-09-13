@@ -4,27 +4,27 @@
 
 function base16-material-darker -d "Material Darker"
   set color00 21/21/21 # Base 00 - Black
-  set color01 F0/71/78 # Base 08 - Red
-  set color02 C3/E8/8D # Base 0B - Green
-  set color03 FF/CB/6B # Base 0A - Yellow
-  set color04 82/AA/FF # Base 0D - Blue
-  set color05 C7/92/EA # Base 0E - Magenta
-  set color06 89/DD/FF # Base 0C - Cyan
-  set color07 EE/FF/FF # Base 05 - White
-  set color08 4A/4A/4A # Base 03 - Bright Black
+  set color01 f0/71/78 # Base 08 - Red
+  set color02 c3/e8/8d # Base 0B - Green
+  set color03 ff/cb/6b # Base 0A - Yellow
+  set color04 82/aa/ff # Base 0D - Blue
+  set color05 c7/92/ea # Base 0E - Magenta
+  set color06 89/dd/ff # Base 0C - Cyan
+  set color07 ee/ff/ff # Base 05 - White
+  set color08 4a/4a/4a # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 FF/FF/FF # Base 07 - Bright White
-  set color16 F7/8C/6C # Base 09
-  set color17 FF/53/70 # Base 0F
+  set color15 ff/ff/ff # Base 07 - Bright White
+  set color16 f7/8c/6c # Base 09
+  set color17 ff/53/70 # Base 0F
   set color18 30/30/30 # Base 01
   set color19 35/35/35 # Base 02
-  set color20 B2/CC/D6 # Base 04
-  set color21 EE/FF/FF # Base 06
+  set color20 b2/cc/d6 # Base 04
+  set color21 ee/ff/ff # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,12 +78,12 @@ function base16-material-darker -d "Material Darker"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg EEFFFF # foreground
+    put_template_custom Pg eeffff # foreground
     put_template_custom Ph 212121 # background
-    put_template_custom Pi EEFFFF # bold color
+    put_template_custom Pi eeffff # bold color
     put_template_custom Pj 353535 # selection color
-    put_template_custom Pk EEFFFF # selected text color
-    put_template_custom Pl EEFFFF # cursor
+    put_template_custom Pk eeffff # selected text color
+    put_template_custom Pl eeffff # cursor
     put_template_custom Pm 212121 # cursor text
   else
     put_template_var 10 $colorfg
@@ -111,7 +111,7 @@ function base16-material-darker -d "Material Darker"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param B2CCD6
+  set -U fish_color_param b2ccd6
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
   set -U fish_color_search_match bryellow --background=353535
@@ -126,6 +126,10 @@ function base16-material-darker -d "Material Darker"
 
   # remember current theme
   set -U base16_theme material-darker
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "21" "21" "21"
+  __base16_fish_shell_create_vimrc_background material-darker
 
   # clean up
   functions -e put_template put_template_var put_template_custom

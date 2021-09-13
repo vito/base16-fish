@@ -127,6 +127,10 @@ function base16-atelier-savanna-light -d "Atelier Savanna Light"
   # remember current theme
   set -U base16_theme atelier-savanna-light
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "ec" "f4" "ee"
+  __base16_fish_shell_create_vimrc_background atelier-savanna-light
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

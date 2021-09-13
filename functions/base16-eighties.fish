@@ -127,6 +127,10 @@ function base16-eighties -d "Eighties"
   # remember current theme
   set -U base16_theme eighties
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "2d" "2d" "2d"
+  __base16_fish_shell_create_vimrc_background eighties
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

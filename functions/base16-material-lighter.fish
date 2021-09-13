@@ -3,28 +3,28 @@
 # Material Lighter scheme by Nate Peterson
 
 function base16-material-lighter -d "Material Lighter"
-  set color00 FA/FA/FA # Base 00 - Black
-  set color01 FF/53/70 # Base 08 - Red
-  set color02 91/B8/59 # Base 0B - Green
-  set color03 FF/B6/2C # Base 0A - Yellow
-  set color04 61/82/B8 # Base 0D - Blue
-  set color05 7C/4D/FF # Base 0E - Magenta
-  set color06 39/AD/B5 # Base 0C - Cyan
-  set color07 80/CB/C4 # Base 05 - White
-  set color08 CC/D7/DA # Base 03 - Bright Black
+  set color00 fa/fa/fa # Base 00 - Black
+  set color01 ff/53/70 # Base 08 - Red
+  set color02 91/b8/59 # Base 0B - Green
+  set color03 ff/b6/2c # Base 0A - Yellow
+  set color04 61/82/b8 # Base 0D - Blue
+  set color05 7c/4d/ff # Base 0E - Magenta
+  set color06 39/ad/b5 # Base 0C - Cyan
+  set color07 80/cb/c4 # Base 05 - White
+  set color08 cc/d7/da # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 FF/FF/FF # Base 07 - Bright White
-  set color16 F7/6D/47 # Base 09
-  set color17 E5/39/35 # Base 0F
-  set color18 E7/EA/EC # Base 01
-  set color19 CC/EA/E7 # Base 02
-  set color20 87/96/B0 # Base 04
-  set color21 80/CB/C4 # Base 06
+  set color15 ff/ff/ff # Base 07 - Bright White
+  set color16 f7/6d/47 # Base 09
+  set color17 e5/39/35 # Base 0F
+  set color18 e7/ea/ec # Base 01
+  set color19 cc/ea/e7 # Base 02
+  set color20 87/96/b0 # Base 04
+  set color21 80/cb/c4 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-material-lighter -d "Material Lighter"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg 80CBC4 # foreground
-    put_template_custom Ph FAFAFA # background
-    put_template_custom Pi 80CBC4 # bold color
-    put_template_custom Pj CCEAE7 # selection color
-    put_template_custom Pk 80CBC4 # selected text color
-    put_template_custom Pl 80CBC4 # cursor
-    put_template_custom Pm FAFAFA # cursor text
+    put_template_custom Pg 80cbc4 # foreground
+    put_template_custom Ph fafafa # background
+    put_template_custom Pi 80cbc4 # bold color
+    put_template_custom Pj cceae7 # selection color
+    put_template_custom Pk 80cbc4 # selected text color
+    put_template_custom Pl 80cbc4 # cursor
+    put_template_custom Pm fafafa # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-material-lighter -d "Material Lighter"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion CCEAE7
+  set -U fish_color_autosuggestion cceae7
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment CCEAE7
+  set -U fish_color_comment cceae7
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-material-lighter -d "Material Lighter"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 8796B0
+  set -U fish_color_param 8796b0
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=CCEAE7
-  set -U fish_color_selection white --bold --background=CCEAE7
+  set -U fish_color_search_match bryellow --background=cceae7
+  set -U fish_color_selection white --bold --background=cceae7
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -126,6 +126,10 @@ function base16-material-lighter -d "Material Lighter"
 
   # remember current theme
   set -U base16_theme material-lighter
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "fa" "fa" "fa"
+  __base16_fish_shell_create_vimrc_background material-lighter
 
   # clean up
   functions -e put_template put_template_var put_template_custom

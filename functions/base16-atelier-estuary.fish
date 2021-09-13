@@ -127,6 +127,10 @@ function base16-atelier-estuary -d "Atelier Estuary"
   # remember current theme
   set -U base16_theme atelier-estuary
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "22" "22" "1b"
+  __base16_fish_shell_create_vimrc_background atelier-estuary
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

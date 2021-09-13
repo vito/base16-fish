@@ -10,21 +10,21 @@ function base16-brushtrees-dark -d "Brush Trees Dark"
   set color04 86/8c/b3 # Base 0D - Blue
   set color05 b3/86/b2 # Base 0E - Magenta
   set color06 86/b3/b3 # Base 0C - Cyan
-  set color07 B0/C5/C8 # Base 05 - White
-  set color08 82/99/A1 # Base 03 - Bright Black
+  set color07 b0/c5/c8 # Base 05 - White
+  set color08 82/99/a1 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 E3/EF/EF # Base 07 - Bright White
+  set color15 e3/ef/ef # Base 07 - Bright White
   set color16 d8/bb/a2 # Base 09
   set color17 b3/9f/9f # Base 0F
-  set color18 5A/6D/7A # Base 01
-  set color19 6D/82/8E # Base 02
-  set color20 98/AF/B5 # Base 04
-  set color21 C9/DB/DC # Base 06
+  set color18 5a/6d/7a # Base 01
+  set color19 6d/82/8e # Base 02
+  set color20 98/af/b5 # Base 04
+  set color21 c9/db/dc # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,12 +78,12 @@ function base16-brushtrees-dark -d "Brush Trees Dark"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg B0C5C8 # foreground
+    put_template_custom Pg b0c5c8 # foreground
     put_template_custom Ph 485867 # background
-    put_template_custom Pi B0C5C8 # bold color
-    put_template_custom Pj 6D828E # selection color
-    put_template_custom Pk B0C5C8 # selected text color
-    put_template_custom Pl B0C5C8 # cursor
+    put_template_custom Pi b0c5c8 # bold color
+    put_template_custom Pj 6d828e # selection color
+    put_template_custom Pk b0c5c8 # selected text color
+    put_template_custom Pl b0c5c8 # cursor
     put_template_custom Pm 485867 # cursor text
   else
     put_template_var 10 $colorfg
@@ -97,10 +97,10 @@ function base16-brushtrees-dark -d "Brush Trees Dark"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 6D828E
+  set -U fish_color_autosuggestion 6d828e
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 6D828E
+  set -U fish_color_comment 6d828e
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-brushtrees-dark -d "Brush Trees Dark"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 98AFB5
+  set -U fish_color_param 98afb5
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=6D828E
-  set -U fish_color_selection white --bold --background=6D828E
+  set -U fish_color_search_match bryellow --background=6d828e
+  set -U fish_color_selection white --bold --background=6d828e
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -126,6 +126,10 @@ function base16-brushtrees-dark -d "Brush Trees Dark"
 
   # remember current theme
   set -U base16_theme brushtrees-dark
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "48" "58" "67"
+  __base16_fish_shell_create_vimrc_background brushtrees-dark
 
   # clean up
   functions -e put_template put_template_var put_template_custom

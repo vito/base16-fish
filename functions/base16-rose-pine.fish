@@ -4,12 +4,12 @@
 
 function base16-rose-pine -d "Rosé Pine"
   set color00 19/17/24 # Base 00 - Black
-  set color01 e2/e1/e7 # Base 08 - Red
-  set color02 eb/bc/ba # Base 0B - Green
+  set color01 eb/6f/92 # Base 08 - Red
+  set color02 31/74/8f # Base 0B - Green
   set color03 f6/c1/77 # Base 0A - Yellow
   set color04 9c/cf/d8 # Base 0D - Blue
   set color05 c4/a7/e7 # Base 0E - Magenta
-  set color06 31/74/8f # Base 0C - Cyan
+  set color06 eb/bc/ba # Base 0C - Cyan
   set color07 e0/de/f4 # Base 05 - White
   set color08 55/51/69 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
@@ -19,7 +19,7 @@ function base16-rose-pine -d "Rosé Pine"
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
   set color15 c5/c3/ce # Base 07 - Bright White
-  set color16 eb/6f/92 # Base 09
+  set color16 f6/c1/77 # Base 09
   set color17 e5/e5/e5 # Base 0F
   set color18 1f/1d/2e # Base 01
   set color19 26/23/3a # Base 02
@@ -126,6 +126,10 @@ function base16-rose-pine -d "Rosé Pine"
 
   # remember current theme
   set -U base16_theme rose-pine
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "19" "17" "24"
+  __base16_fish_shell_create_vimrc_background rose-pine
 
   # clean up
   functions -e put_template put_template_var put_template_custom

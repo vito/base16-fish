@@ -127,6 +127,10 @@ function base16-railscasts -d "Railscasts"
   # remember current theme
   set -U base16_theme railscasts
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "2b" "2b" "2b"
+  __base16_fish_shell_create_vimrc_background railscasts
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

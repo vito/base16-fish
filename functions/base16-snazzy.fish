@@ -127,6 +127,10 @@ function base16-snazzy -d "Snazzy"
   # remember current theme
   set -U base16_theme snazzy
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "28" "2a" "36"
+  __base16_fish_shell_create_vimrc_background snazzy
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

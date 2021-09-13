@@ -3,28 +3,28 @@
 # XCode Dusk scheme by Elsa Gonsiorowski (https://github.com/gonsie)
 
 function base16-xcode-dusk -d "XCode Dusk"
-  set color00 28/2B/35 # Base 00 - Black
-  set color01 B2/18/89 # Base 08 - Red
-  set color02 DF/00/02 # Base 0B - Green
+  set color00 28/2b/35 # Base 00 - Black
+  set color01 b2/18/89 # Base 08 - Red
+  set color02 df/00/02 # Base 0B - Green
   set color03 43/82/88 # Base 0A - Yellow
-  set color04 79/0E/AD # Base 0D - Blue
-  set color05 B2/18/89 # Base 0E - Magenta
-  set color06 00/A0/BE # Base 0C - Cyan
+  set color04 79/0e/ad # Base 0D - Blue
+  set color05 b2/18/89 # Base 0E - Magenta
+  set color06 00/a0/be # Base 0C - Cyan
   set color07 93/95/99 # Base 05 - White
-  set color08 68/6A/71 # Base 03 - Bright Black
+  set color08 68/6a/71 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 BE/BF/C2 # Base 07 - Bright White
-  set color16 78/6D/C5 # Base 09
-  set color17 C7/7C/48 # Base 0F
-  set color18 3D/40/48 # Base 01
-  set color19 53/55/5D # Base 02
-  set color20 7E/80/86 # Base 04
-  set color21 A9/AA/AE # Base 06
+  set color15 be/bf/c2 # Base 07 - Bright White
+  set color16 78/6d/c5 # Base 09
+  set color17 c7/7c/48 # Base 0F
+  set color18 3d/40/48 # Base 01
+  set color19 53/55/5d # Base 02
+  set color20 7e/80/86 # Base 04
+  set color21 a9/aa/ae # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -79,12 +79,12 @@ function base16-xcode-dusk -d "XCode Dusk"
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
     put_template_custom Pg 939599 # foreground
-    put_template_custom Ph 282B35 # background
+    put_template_custom Ph 282b35 # background
     put_template_custom Pi 939599 # bold color
-    put_template_custom Pj 53555D # selection color
+    put_template_custom Pj 53555d # selection color
     put_template_custom Pk 939599 # selected text color
     put_template_custom Pl 939599 # cursor
-    put_template_custom Pm 282B35 # cursor text
+    put_template_custom Pm 282b35 # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-xcode-dusk -d "XCode Dusk"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 53555D
+  set -U fish_color_autosuggestion 53555d
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 53555D
+  set -U fish_color_comment 53555d
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-xcode-dusk -d "XCode Dusk"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 7E8086
+  set -U fish_color_param 7e8086
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=53555D
-  set -U fish_color_selection white --bold --background=53555D
+  set -U fish_color_search_match bryellow --background=53555d
+  set -U fish_color_selection white --bold --background=53555d
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -126,6 +126,10 @@ function base16-xcode-dusk -d "XCode Dusk"
 
   # remember current theme
   set -U base16_theme xcode-dusk
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "28" "2b" "35"
+  __base16_fish_shell_create_vimrc_background xcode-dusk
 
   # clean up
   functions -e put_template put_template_var put_template_custom

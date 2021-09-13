@@ -127,6 +127,10 @@ function base16-bespin -d "Bespin"
   # remember current theme
   set -U base16_theme bespin
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "28" "21" "1c"
+  __base16_fish_shell_create_vimrc_background bespin
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

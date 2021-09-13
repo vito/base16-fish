@@ -127,6 +127,10 @@ function base16-windows-95-light -d "Windows 95 Light"
   # remember current theme
   set -U base16_theme windows-95-light
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "fc" "fc" "fc"
+  __base16_fish_shell_create_vimrc_background windows-95-light
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

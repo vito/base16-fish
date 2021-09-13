@@ -127,6 +127,10 @@ function base16-brewer -d "Brewer"
   # remember current theme
   set -U base16_theme brewer
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "0c" "0d" "0e"
+  __base16_fish_shell_create_vimrc_background brewer
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

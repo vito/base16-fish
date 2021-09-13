@@ -127,6 +127,10 @@ function base16-vulcan -d "vulcan"
   # remember current theme
   set -U base16_theme vulcan
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "04" "15" "23"
+  __base16_fish_shell_create_vimrc_background vulcan
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

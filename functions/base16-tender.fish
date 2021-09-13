@@ -11,14 +11,14 @@ function base16-tender -d "tender"
   set color05 d3/b9/87 # Base 0E - Magenta
   set color06 73/ce/f4 # Base 0C - Cyan
   set color07 ee/ee/ee # Base 05 - White
-  set color08 1d/1d/1d # Base 03 - Bright Black
+  set color08 4c/4c/4c # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 ff/ff/ff # Base 07 - Bright White
+  set color15 fe/ff/ff # Base 07 - Bright White
   set color16 dc/96/56 # Base 09
   set color17 a1/69/46 # Base 0F
   set color18 38/38/38 # Base 01
@@ -126,6 +126,10 @@ function base16-tender -d "tender"
 
   # remember current theme
   set -U base16_theme tender
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "28" "28" "28"
+  __base16_fish_shell_create_vimrc_background tender
 
   # clean up
   functions -e put_template put_template_var put_template_custom

@@ -127,6 +127,10 @@ function base16-black-metal-gorgoroth -d "Black Metal (Gorgoroth)"
   # remember current theme
   set -U base16_theme black-metal-gorgoroth
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "00" "00" "00"
+  __base16_fish_shell_create_vimrc_background black-metal-gorgoroth
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

@@ -127,6 +127,10 @@ function base16-woodland -d "Woodland"
   # remember current theme
   set -U base16_theme woodland
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "23" "1e" "18"
+  __base16_fish_shell_create_vimrc_background woodland
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

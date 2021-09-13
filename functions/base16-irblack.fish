@@ -127,6 +127,10 @@ function base16-irblack -d "IR Black"
   # remember current theme
   set -U base16_theme irblack
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "00" "00" "00"
+  __base16_fish_shell_create_vimrc_background irblack
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

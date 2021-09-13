@@ -127,6 +127,10 @@ function base16-atelier-lakeside-light -d "Atelier Lakeside Light"
   # remember current theme
   set -U base16_theme atelier-lakeside-light
 
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "eb" "f8" "ff"
+  __base16_fish_shell_create_vimrc_background atelier-lakeside-light
+
   # clean up
   functions -e put_template put_template_var put_template_custom
 end

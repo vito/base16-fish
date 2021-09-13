@@ -4,13 +4,13 @@
 
 function base16-framer -d "Framer"
   set color00 18/18/18 # Base 00 - Black
-  set color01 FD/88/6B # Base 08 - Red
-  set color02 32/CC/DC # Base 0B - Green
-  set color03 FE/CB/6E # Base 0A - Yellow
-  set color04 20/BC/FC # Base 0D - Blue
-  set color05 BA/8C/FC # Base 0E - Magenta
-  set color06 AC/DD/FD # Base 0C - Cyan
-  set color07 D0/D0/D0 # Base 05 - White
+  set color01 fd/88/6b # Base 08 - Red
+  set color02 32/cc/dc # Base 0B - Green
+  set color03 fe/cb/6e # Base 0A - Yellow
+  set color04 20/bc/fc # Base 0D - Blue
+  set color05 ba/8c/fc # Base 0E - Magenta
+  set color06 ac/dd/fd # Base 0C - Cyan
+  set color07 d0/d0/d0 # Base 05 - White
   set color08 74/74/74 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
@@ -18,13 +18,13 @@ function base16-framer -d "Framer"
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 EE/EE/EE # Base 07 - Bright White
-  set color16 FC/47/69 # Base 09
-  set color17 B1/5F/4A # Base 0F
+  set color15 ee/ee/ee # Base 07 - Bright White
+  set color16 fc/47/69 # Base 09
+  set color17 b1/5f/4a # Base 0F
   set color18 15/15/15 # Base 01
   set color19 46/46/46 # Base 02
-  set color20 B9/B9/B9 # Base 04
-  set color21 E8/E8/E8 # Base 06
+  set color20 b9/b9/b9 # Base 04
+  set color21 e8/e8/e8 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,12 +78,12 @@ function base16-framer -d "Framer"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg D0D0D0 # foreground
+    put_template_custom Pg d0d0d0 # foreground
     put_template_custom Ph 181818 # background
-    put_template_custom Pi D0D0D0 # bold color
+    put_template_custom Pi d0d0d0 # bold color
     put_template_custom Pj 464646 # selection color
-    put_template_custom Pk D0D0D0 # selected text color
-    put_template_custom Pl D0D0D0 # cursor
+    put_template_custom Pk d0d0d0 # selected text color
+    put_template_custom Pl d0d0d0 # cursor
     put_template_custom Pm 181818 # cursor text
   else
     put_template_var 10 $colorfg
@@ -111,7 +111,7 @@ function base16-framer -d "Framer"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param B9B9B9
+  set -U fish_color_param b9b9b9
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
   set -U fish_color_search_match bryellow --background=464646
@@ -126,6 +126,10 @@ function base16-framer -d "Framer"
 
   # remember current theme
   set -U base16_theme framer
+
+  # write ~/.vimrc_background
+  __base16_fish_shell_set_background "18" "18" "18"
+  __base16_fish_shell_create_vimrc_background framer
 
   # clean up
   functions -e put_template put_template_var put_template_custom
