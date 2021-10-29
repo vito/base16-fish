@@ -3,15 +3,15 @@
 # Summerfruit Light scheme by Christopher Corley (http://christop.club/)
 
 function base16-summerfruit-light -d "Summerfruit Light"
-  set color00 ff/ff/ff # Base 00 - Black
-  set color01 ff/00/86 # Base 08 - Red
-  set color02 00/c9/18 # Base 0B - Green
-  set color03 ab/a8/00 # Base 0A - Yellow
-  set color04 37/77/e6 # Base 0D - Blue
-  set color05 ad/00/a1 # Base 0E - Magenta
-  set color06 1f/aa/aa # Base 0C - Cyan
+  set color00 FF/FF/FF # Base 00 - Black
+  set color01 FF/00/86 # Base 08 - Red
+  set color02 00/C9/18 # Base 0B - Green
+  set color03 AB/A8/00 # Base 0A - Yellow
+  set color04 37/77/E6 # Base 0D - Blue
+  set color05 AD/00/A1 # Base 0E - Magenta
+  set color06 1F/AA/AA # Base 0C - Cyan
   set color07 10/10/10 # Base 05 - White
-  set color08 b0/b0/b0 # Base 03 - Bright Black
+  set color08 B0/B0/B0 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
@@ -19,10 +19,10 @@ function base16-summerfruit-light -d "Summerfruit Light"
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
   set color15 20/20/20 # Base 07 - Bright White
-  set color16 fd/89/00 # Base 09
-  set color17 cc/66/33 # Base 0F
-  set color18 e0/e0/e0 # Base 01
-  set color19 d0/d0/d0 # Base 02
+  set color16 FD/89/00 # Base 09
+  set color17 CC/66/33 # Base 0F
+  set color18 E0/E0/E0 # Base 01
+  set color19 D0/D0/D0 # Base 02
   set color20 00/00/00 # Base 04
   set color21 15/15/15 # Base 06
   set colorfg $color07 # Base 05 - White
@@ -79,12 +79,12 @@ function base16-summerfruit-light -d "Summerfruit Light"
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
     put_template_custom Pg 101010 # foreground
-    put_template_custom Ph ffffff # background
+    put_template_custom Ph FFFFFF # background
     put_template_custom Pi 101010 # bold color
-    put_template_custom Pj d0d0d0 # selection color
+    put_template_custom Pj D0D0D0 # selection color
     put_template_custom Pk 101010 # selected text color
     put_template_custom Pl 101010 # cursor
-    put_template_custom Pm ffffff # cursor text
+    put_template_custom Pm FFFFFF # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-summerfruit-light -d "Summerfruit Light"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion d0d0d0
+  set -U fish_color_autosuggestion D0D0D0
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment d0d0d0
+  set -U fish_color_comment D0D0D0
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -114,8 +114,8 @@ function base16-summerfruit-light -d "Summerfruit Light"
   set -U fish_color_param 000000
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=d0d0d0
-  set -U fish_color_selection white --bold --background=d0d0d0
+  set -U fish_color_search_match bryellow --background=D0D0D0
+  set -U fish_color_selection white --bold --background=D0D0D0
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -128,7 +128,7 @@ function base16-summerfruit-light -d "Summerfruit Light"
   set -U base16_theme summerfruit-light
 
   # write ~/.vimrc_background
-  __base16_fish_shell_set_background "ff" "ff" "ff"
+  __base16_fish_shell_set_background "FF" "FF" "FF"
   __base16_fish_shell_create_vimrc_background summerfruit-light
 
   # clean up

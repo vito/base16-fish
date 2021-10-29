@@ -1,30 +1,30 @@
 # base16-fish (https://github.com/tomyun/base16-fish)
 # based on base16-shell (https://github.com/chriskempson/base16-shell)
-# Horizon Light scheme by Michaël Ball (http://github.com/michael-ball/)
+# Tokyo City Dark scheme by Michaël Ball
 
-function base16-horizon-light -d "Horizon Light"
-  set color00 FD/F0/ED # Base 00 - Black
-  set color01 F7/93/9B # Base 08 - Red
-  set color02 94/E1/B0 # Base 0B - Green
-  set color03 FB/E0/D9 # Base 0A - Yellow
-  set color04 DA/10/3F # Base 0D - Blue
-  set color05 1D/89/91 # Base 0E - Magenta
-  set color06 DC/33/18 # Base 0C - Cyan
-  set color07 40/3C/3D # Base 05 - White
-  set color08 BD/B3/B1 # Base 03 - Bright Black
+function base16-tokyo-city-dark -d "Tokyo City Dark"
+  set color00 17/1D/23 # Base 00 - Black
+  set color01 F7/76/8E # Base 08 - Red
+  set color02 9E/CE/6A # Base 0B - Green
+  set color03 B7/C5/D3 # Base 0A - Yellow
+  set color04 7A/A2/F7 # Base 0D - Blue
+  set color05 BB/9A/F7 # Base 0E - Magenta
+  set color06 89/DD/FF # Base 0C - Cyan
+  set color07 D8/E2/EC # Base 05 - White
+  set color08 52/62/70 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 20/1C/1D # Base 07 - Bright White
-  set color16 F6/66/1E # Base 09
-  set color17 E5/8C/92 # Base 0F
-  set color18 FA/DA/D1 # Base 01
-  set color19 F9/CB/BE # Base 02
-  set color20 94/8C/8A # Base 04
-  set color21 30/2C/2D # Base 06
+  set color15 FB/FB/FD # Base 07 - Bright White
+  set color16 FF/9E/64 # Base 09
+  set color17 BB/9A/F7 # Base 0F
+  set color18 1D/25/2C # Base 01
+  set color19 28/32/3A # Base 02
+  set color20 B7/C5/D3 # Base 04
+  set color21 F6/F6/F8 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-horizon-light -d "Horizon Light"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg 403C3D # foreground
-    put_template_custom Ph FDF0ED # background
-    put_template_custom Pi 403C3D # bold color
-    put_template_custom Pj F9CBBE # selection color
-    put_template_custom Pk 403C3D # selected text color
-    put_template_custom Pl 403C3D # cursor
-    put_template_custom Pm FDF0ED # cursor text
+    put_template_custom Pg D8E2EC # foreground
+    put_template_custom Ph 171D23 # background
+    put_template_custom Pi D8E2EC # bold color
+    put_template_custom Pj 28323A # selection color
+    put_template_custom Pk D8E2EC # selected text color
+    put_template_custom Pl D8E2EC # cursor
+    put_template_custom Pm 171D23 # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-horizon-light -d "Horizon Light"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion F9CBBE
+  set -U fish_color_autosuggestion 28323A
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment F9CBBE
+  set -U fish_color_comment 28323A
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-horizon-light -d "Horizon Light"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 948C8A
+  set -U fish_color_param B7C5D3
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=F9CBBE
-  set -U fish_color_selection white --bold --background=F9CBBE
+  set -U fish_color_search_match bryellow --background=28323A
+  set -U fish_color_selection white --bold --background=28323A
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -125,11 +125,11 @@ function base16-horizon-light -d "Horizon Light"
   set -U fish_pager_color_progress brwhite --background=cyan
 
   # remember current theme
-  set -U base16_theme horizon-light
+  set -U base16_theme tokyo-city-dark
 
   # write ~/.vimrc_background
-  __base16_fish_shell_set_background "FD" "F0" "ED"
-  __base16_fish_shell_create_vimrc_background horizon-light
+  __base16_fish_shell_set_background "17" "1D" "23"
+  __base16_fish_shell_create_vimrc_background tokyo-city-dark
 
   # clean up
   functions -e put_template put_template_var put_template_custom

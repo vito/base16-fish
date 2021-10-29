@@ -11,7 +11,7 @@ function base16-hardcore -d "Hardcore"
   set color05 9e/6f/fe # Base 0E - Magenta
   set color06 70/83/87 # Base 0C - Cyan
   set color07 cd/cd/cd # Base 05 - White
-  set color08 4a/4a/4a # Base 03 - Bright Black
+  set color08 4A/4A/4A # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow

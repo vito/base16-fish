@@ -3,28 +3,28 @@
 # Solar Flare Light scheme by Chuck Harmston (https://chuck.harmston.ch)
 
 function base16-solarflare-light -d "Solar Flare Light"
-  set color00 f5/f7/fa # Base 00 - Black
-  set color01 ef/52/53 # Base 08 - Red
-  set color02 7c/c8/44 # Base 0B - Green
-  set color03 e4/b5/1c # Base 0A - Yellow
-  set color04 33/b5/e1 # Base 0D - Blue
-  set color05 a3/63/d5 # Base 0E - Magenta
-  set color06 52/cb/b0 # Base 0C - Cyan
+  set color00 F5/F7/FA # Base 00 - Black
+  set color01 EF/52/53 # Base 08 - Red
+  set color02 7C/C8/44 # Base 0B - Green
+  set color03 E4/B5/1C # Base 0A - Yellow
+  set color04 33/B5/E1 # Base 0D - Blue
+  set color05 A3/63/D5 # Base 0E - Magenta
+  set color06 52/CB/B0 # Base 0C - Cyan
   set color07 58/68/75 # Base 05 - White
-  set color08 85/93/9e # Base 03 - Bright Black
+  set color08 85/93/9E # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 18/26/2f # Base 07 - Bright White
-  set color16 e6/6b/2b # Base 09
-  set color17 d7/3c/9a # Base 0F
-  set color18 e8/e9/ed # Base 01
-  set color19 a6/af/b8 # Base 02
+  set color15 18/26/2F # Base 07 - Bright White
+  set color16 E6/6B/2B # Base 09
+  set color17 D7/3C/9A # Base 0F
+  set color18 E8/E9/ED # Base 01
+  set color19 A6/AF/B8 # Base 02
   set color20 66/75/81 # Base 04
-  set color21 22/2e/38 # Base 06
+  set color21 22/2E/38 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -79,12 +79,12 @@ function base16-solarflare-light -d "Solar Flare Light"
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
     put_template_custom Pg 586875 # foreground
-    put_template_custom Ph f5f7fa # background
+    put_template_custom Ph F5F7FA # background
     put_template_custom Pi 586875 # bold color
-    put_template_custom Pj a6afb8 # selection color
+    put_template_custom Pj A6AFB8 # selection color
     put_template_custom Pk 586875 # selected text color
     put_template_custom Pl 586875 # cursor
-    put_template_custom Pm f5f7fa # cursor text
+    put_template_custom Pm F5F7FA # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-solarflare-light -d "Solar Flare Light"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion a6afb8
+  set -U fish_color_autosuggestion A6AFB8
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment a6afb8
+  set -U fish_color_comment A6AFB8
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -114,8 +114,8 @@ function base16-solarflare-light -d "Solar Flare Light"
   set -U fish_color_param 667581
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=a6afb8
-  set -U fish_color_selection white --bold --background=a6afb8
+  set -U fish_color_search_match bryellow --background=A6AFB8
+  set -U fish_color_selection white --bold --background=A6AFB8
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -128,7 +128,7 @@ function base16-solarflare-light -d "Solar Flare Light"
   set -U base16_theme solarflare-light
 
   # write ~/.vimrc_background
-  __base16_fish_shell_set_background "f5" "f7" "fa"
+  __base16_fish_shell_set_background "F5" "F7" "FA"
   __base16_fish_shell_create_vimrc_background solarflare-light
 
   # clean up

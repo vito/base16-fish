@@ -3,28 +3,28 @@
 # Darktooth scheme by Jason Milkins (https://github.com/jasonm23)
 
 function base16-darktooth -d "Darktooth"
-  set color00 1d/20/21 # Base 00 - Black
-  set color01 fb/54/3f # Base 08 - Red
-  set color02 95/c0/85 # Base 0B - Green
-  set color03 fa/c0/3b # Base 0A - Yellow
-  set color04 0d/66/78 # Base 0D - Blue
-  set color05 8f/46/73 # Base 0E - Magenta
-  set color06 8b/a5/9b # Base 0C - Cyan
-  set color07 a8/99/84 # Base 05 - White
-  set color08 66/5c/54 # Base 03 - Bright Black
+  set color00 1D/20/21 # Base 00 - Black
+  set color01 FB/54/3F # Base 08 - Red
+  set color02 95/C0/85 # Base 0B - Green
+  set color03 FA/C0/3B # Base 0A - Yellow
+  set color04 0D/66/78 # Base 0D - Blue
+  set color05 8F/46/73 # Base 0E - Magenta
+  set color06 8B/A5/9B # Base 0C - Cyan
+  set color07 A8/99/84 # Base 05 - White
+  set color08 66/5C/54 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 fd/f4/c1 # Base 07 - Bright White
-  set color16 fe/86/25 # Base 09
-  set color17 a8/73/22 # Base 0F
-  set color18 32/30/2f # Base 01
+  set color15 FD/F4/C1 # Base 07 - Bright White
+  set color16 FE/86/25 # Base 09
+  set color17 A8/73/22 # Base 0F
+  set color18 32/30/2F # Base 01
   set color19 50/49/45 # Base 02
   set color20 92/83/74 # Base 04
-  set color21 d5/c4/a1 # Base 06
+  set color21 D5/C4/A1 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-darktooth -d "Darktooth"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg a89984 # foreground
-    put_template_custom Ph 1d2021 # background
-    put_template_custom Pi a89984 # bold color
+    put_template_custom Pg A89984 # foreground
+    put_template_custom Ph 1D2021 # background
+    put_template_custom Pi A89984 # bold color
     put_template_custom Pj 504945 # selection color
-    put_template_custom Pk a89984 # selected text color
-    put_template_custom Pl a89984 # cursor
-    put_template_custom Pm 1d2021 # cursor text
+    put_template_custom Pk A89984 # selected text color
+    put_template_custom Pl A89984 # cursor
+    put_template_custom Pm 1D2021 # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -128,7 +128,7 @@ function base16-darktooth -d "Darktooth"
   set -U base16_theme darktooth
 
   # write ~/.vimrc_background
-  __base16_fish_shell_set_background "1d" "20" "21"
+  __base16_fish_shell_set_background "1D" "20" "21"
   __base16_fish_shell_create_vimrc_background darktooth
 
   # clean up

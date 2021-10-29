@@ -8,7 +8,7 @@ function base16-summercamp -d "summercamp"
   set color02 5c/eb/5a # Base 0B - Green
   set color03 f2/ff/27 # Base 0A - Yellow
   set color04 48/9b/f0 # Base 0D - Blue
-  set color05 ff/80/80 # Base 0E - Magenta
+  set color05 FF/80/80 # Base 0E - Magenta
   set color06 5a/eb/bc # Base 0C - Cyan
   set color07 73/6e/55 # Base 05 - White
   set color08 50/4b/38 # Base 03 - Bright Black
@@ -20,7 +20,7 @@ function base16-summercamp -d "summercamp"
   set color14 $color06 # Base 0C - Bright Cyan
   set color15 f8/f5/de # Base 07 - Bright White
   set color16 fb/a1/1b # Base 09
-  set color17 f6/9b/e7 # Base 0F
+  set color17 F6/9B/E7 # Base 0F
   set color18 2a/26/1c # Base 01
   set color19 3a/35/27 # Base 02
   set color20 5f/5b/45 # Base 04

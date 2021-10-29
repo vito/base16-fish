@@ -3,28 +3,28 @@
 # Horizon Dark scheme by Michaël Ball (http://github.com/michael-ball/)
 
 function base16-horizon-terminal-dark -d "Horizon Dark"
-  set color00 1c/1e/26 # Base 00 - Black
-  set color01 e9/56/78 # Base 08 - Red
-  set color02 29/d3/98 # Base 0B - Green
-  set color03 fa/c2/9a # Base 0A - Yellow
-  set color04 26/bb/d9 # Base 0D - Blue
-  set color05 ee/64/ac # Base 0E - Magenta
-  set color06 59/e1/e3 # Base 0C - Cyan
-  set color07 cb/ce/d0 # Base 05 - White
-  set color08 6f/6f/70 # Base 03 - Bright Black
+  set color00 1C/1E/26 # Base 00 - Black
+  set color01 E9/56/78 # Base 08 - Red
+  set color02 29/D3/98 # Base 0B - Green
+  set color03 FA/C2/9A # Base 0A - Yellow
+  set color04 26/BB/D9 # Base 0D - Blue
+  set color05 EE/64/AC # Base 0E - Magenta
+  set color06 59/E1/E3 # Base 0C - Cyan
+  set color07 CB/CE/D0 # Base 05 - White
+  set color08 6F/6F/70 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 e3/e6/ee # Base 07 - Bright White
-  set color16 fa/b7/95 # Base 09
-  set color17 f0/93/83 # Base 0F
+  set color15 E3/E6/EE # Base 07 - Bright White
+  set color16 FA/B7/95 # Base 09
+  set color17 F0/93/83 # Base 0F
   set color18 23/25/30 # Base 01
-  set color19 2e/30/3e # Base 02
-  set color20 9d/a0/a2 # Base 04
-  set color21 dc/df/e4 # Base 06
+  set color19 2E/30/3E # Base 02
+  set color20 9D/A0/A2 # Base 04
+  set color21 DC/DF/E4 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-horizon-terminal-dark -d "Horizon Dark"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg cbced0 # foreground
-    put_template_custom Ph 1c1e26 # background
-    put_template_custom Pi cbced0 # bold color
-    put_template_custom Pj 2e303e # selection color
-    put_template_custom Pk cbced0 # selected text color
-    put_template_custom Pl cbced0 # cursor
-    put_template_custom Pm 1c1e26 # cursor text
+    put_template_custom Pg CBCED0 # foreground
+    put_template_custom Ph 1C1E26 # background
+    put_template_custom Pi CBCED0 # bold color
+    put_template_custom Pj 2E303E # selection color
+    put_template_custom Pk CBCED0 # selected text color
+    put_template_custom Pl CBCED0 # cursor
+    put_template_custom Pm 1C1E26 # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-horizon-terminal-dark -d "Horizon Dark"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 2e303e
+  set -U fish_color_autosuggestion 2E303E
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 2e303e
+  set -U fish_color_comment 2E303E
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-horizon-terminal-dark -d "Horizon Dark"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 9da0a2
+  set -U fish_color_param 9DA0A2
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=2e303e
-  set -U fish_color_selection white --bold --background=2e303e
+  set -U fish_color_search_match bryellow --background=2E303E
+  set -U fish_color_selection white --bold --background=2E303E
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -128,7 +128,7 @@ function base16-horizon-terminal-dark -d "Horizon Dark"
   set -U base16_theme horizon-terminal-dark
 
   # write ~/.vimrc_background
-  __base16_fish_shell_set_background "1c" "1e" "26"
+  __base16_fish_shell_set_background "1C" "1E" "26"
   __base16_fish_shell_create_vimrc_background horizon-terminal-dark
 
   # clean up

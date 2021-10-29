@@ -10,7 +10,7 @@ function base16-silk-dark -d "Silk Dark"
   set color04 46/bd/dd # Base 0D - Blue
   set color05 75/6b/8a # Base 0E - Magenta
   set color06 3f/b2/b9 # Base 0C - Cyan
-  set color07 c7/db/dd # Base 05 - White
+  set color07 C7/DB/DD # Base 05 - White
   set color08 58/70/73 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
@@ -18,13 +18,13 @@ function base16-silk-dark -d "Silk Dark"
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 d2/fa/ff # Base 07 - Bright White
+  set color15 D2/FA/FF # Base 07 - Bright White
   set color16 fc/ab/74 # Base 09
   set color17 9b/64/7b # Base 0F
-  set color18 1d/49/4e # Base 01
-  set color19 2a/50/54 # Base 02
-  set color20 9d/c8/cd # Base 04
-  set color21 cb/f2/f7 # Base 06
+  set color18 1D/49/4E # Base 01
+  set color19 2A/50/54 # Base 02
+  set color20 9D/C8/CD # Base 04
+  set color21 CB/F2/F7 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,12 +78,12 @@ function base16-silk-dark -d "Silk Dark"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg c7dbdd # foreground
+    put_template_custom Pg C7DBDD # foreground
     put_template_custom Ph 0e3c46 # background
-    put_template_custom Pi c7dbdd # bold color
-    put_template_custom Pj 2a5054 # selection color
-    put_template_custom Pk c7dbdd # selected text color
-    put_template_custom Pl c7dbdd # cursor
+    put_template_custom Pi C7DBDD # bold color
+    put_template_custom Pj 2A5054 # selection color
+    put_template_custom Pk C7DBDD # selected text color
+    put_template_custom Pl C7DBDD # cursor
     put_template_custom Pm 0e3c46 # cursor text
   else
     put_template_var 10 $colorfg
@@ -97,10 +97,10 @@ function base16-silk-dark -d "Silk Dark"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 2a5054
+  set -U fish_color_autosuggestion 2A5054
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 2a5054
+  set -U fish_color_comment 2A5054
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-silk-dark -d "Silk Dark"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 9dc8cd
+  set -U fish_color_param 9DC8CD
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=2a5054
-  set -U fish_color_selection white --bold --background=2a5054
+  set -U fish_color_search_match bryellow --background=2A5054
+  set -U fish_color_selection white --bold --background=2A5054
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline

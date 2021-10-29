@@ -21,7 +21,7 @@ function base16-mellow-purple -d "Mellow Purple"
   set color15 f8/c0/ff # Base 07 - Bright White
   set color16 aa/00/a3 # Base 09
   set color17 4d/6f/ff # Base 0F
-  set color18 1a/09/2d # Base 01
+  set color18 1A/09/2D # Base 01
   set color19 33/13/54 # Base 02
   set color20 87/35/82 # Base 04
   set color21 ff/ee/ff # Base 06

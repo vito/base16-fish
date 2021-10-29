@@ -4,13 +4,13 @@
 
 function base16-qualia -d "Qualia"
   set color00 10/10/10 # Base 00 - Black
-  set color01 ef/a6/a2 # Base 08 - Red
-  set color02 80/c9/90 # Base 0B - Green
-  set color03 e6/a3/dc # Base 0A - Yellow
-  set color04 50/ca/cd # Base 0D - Blue
-  set color05 e0/af/85 # Base 0E - Magenta
-  set color06 c8/c8/74 # Base 0C - Cyan
-  set color07 c0/c0/c0 # Base 05 - White
+  set color01 EF/A6/A2 # Base 08 - Red
+  set color02 80/C9/90 # Base 0B - Green
+  set color03 E6/A3/DC # Base 0A - Yellow
+  set color04 50/CA/CD # Base 0D - Blue
+  set color05 E0/AF/85 # Base 0E - Magenta
+  set color06 C8/C8/74 # Base 0C - Cyan
+  set color07 C0/C0/C0 # Base 05 - White
   set color08 45/45/45 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
@@ -19,12 +19,12 @@ function base16-qualia -d "Qualia"
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
   set color15 45/45/45 # Base 07 - Bright White
-  set color16 a3/b8/ef # Base 09
+  set color16 A3/B8/EF # Base 09
   set color17 80/80/80 # Base 0F
   set color18 45/45/45 # Base 01
   set color19 45/45/45 # Base 02
   set color20 80/80/80 # Base 04
-  set color21 c0/c0/c0 # Base 06
+  set color21 C0/C0/C0 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,12 +78,12 @@ function base16-qualia -d "Qualia"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg c0c0c0 # foreground
+    put_template_custom Pg C0C0C0 # foreground
     put_template_custom Ph 101010 # background
-    put_template_custom Pi c0c0c0 # bold color
+    put_template_custom Pi C0C0C0 # bold color
     put_template_custom Pj 454545 # selection color
-    put_template_custom Pk c0c0c0 # selected text color
-    put_template_custom Pl c0c0c0 # cursor
+    put_template_custom Pk C0C0C0 # selected text color
+    put_template_custom Pl C0C0C0 # cursor
     put_template_custom Pm 101010 # cursor text
   else
     put_template_var 10 $colorfg

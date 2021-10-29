@@ -4,14 +4,14 @@
 
 function base16-seti -d "Seti UI"
   set color00 15/17/18 # Base 00 - Black
-  set color01 cd/3f/45 # Base 08 - Red
+  set color01 Cd/3f/45 # Base 08 - Red
   set color02 9f/ca/56 # Base 0B - Green
   set color03 e6/cd/69 # Base 0A - Yellow
   set color04 55/b5/db # Base 0D - Blue
   set color05 a0/74/c4 # Base 0E - Magenta
   set color06 55/db/be # Base 0C - Cyan
   set color07 d6/d6/d6 # Base 05 - White
-  set color08 41/53/5b # Base 03 - Bright Black
+  set color08 41/53/5B # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
@@ -22,7 +22,7 @@ function base16-seti -d "Seti UI"
   set color16 db/7b/55 # Base 09
   set color17 8a/55/3f # Base 0F
   set color18 28/2a/2b # Base 01
-  set color19 3b/75/8c # Base 02
+  set color19 3B/75/8C # Base 02
   set color20 43/a5/d5 # Base 04
   set color21 ee/ee/ee # Base 06
   set colorfg $color07 # Base 05 - White
@@ -81,7 +81,7 @@ function base16-seti -d "Seti UI"
     put_template_custom Pg d6d6d6 # foreground
     put_template_custom Ph 151718 # background
     put_template_custom Pi d6d6d6 # bold color
-    put_template_custom Pj 3b758c # selection color
+    put_template_custom Pj 3B758C # selection color
     put_template_custom Pk d6d6d6 # selected text color
     put_template_custom Pl d6d6d6 # cursor
     put_template_custom Pm 151718 # cursor text
@@ -97,10 +97,10 @@ function base16-seti -d "Seti UI"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 3b758c
+  set -U fish_color_autosuggestion 3B758C
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 3b758c
+  set -U fish_color_comment 3B758C
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -114,8 +114,8 @@ function base16-seti -d "Seti UI"
   set -U fish_color_param 43a5d5
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=3b758c
-  set -U fish_color_selection white --bold --background=3b758c
+  set -U fish_color_search_match bryellow --background=3B758C
+  set -U fish_color_selection white --bold --background=3B758C
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline

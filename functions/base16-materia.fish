@@ -4,13 +4,13 @@
 
 function base16-materia -d "Materia"
   set color00 26/32/38 # Base 00 - Black
-  set color01 ec/5f/67 # Base 08 - Red
-  set color02 8b/d6/49 # Base 0B - Green
-  set color03 ff/cc/00 # Base 0A - Yellow
-  set color04 89/dd/ff # Base 0D - Blue
-  set color05 82/aa/ff # Base 0E - Magenta
-  set color06 80/cb/c4 # Base 0C - Cyan
-  set color07 cd/d3/de # Base 05 - White
+  set color01 EC/5F/67 # Base 08 - Red
+  set color02 8B/D6/49 # Base 0B - Green
+  set color03 FF/CC/00 # Base 0A - Yellow
+  set color04 89/DD/FF # Base 0D - Blue
+  set color05 82/AA/FF # Base 0E - Magenta
+  set color06 80/CB/C4 # Base 0C - Cyan
+  set color07 CD/D3/DE # Base 05 - White
   set color08 70/78/80 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
@@ -18,13 +18,13 @@ function base16-materia -d "Materia"
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 ff/ff/ff # Base 07 - Bright White
-  set color16 ea/95/60 # Base 09
-  set color17 ec/5f/67 # Base 0F
-  set color18 2c/39/3f # Base 01
-  set color19 37/47/4f # Base 02
-  set color20 c9/cc/d3 # Base 04
-  set color21 d5/db/e5 # Base 06
+  set color15 FF/FF/FF # Base 07 - Bright White
+  set color16 EA/95/60 # Base 09
+  set color17 EC/5F/67 # Base 0F
+  set color18 2C/39/3F # Base 01
+  set color19 37/47/4F # Base 02
+  set color20 C9/CC/D3 # Base 04
+  set color21 D5/DB/E5 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,12 +78,12 @@ function base16-materia -d "Materia"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg cdd3de # foreground
+    put_template_custom Pg CDD3DE # foreground
     put_template_custom Ph 263238 # background
-    put_template_custom Pi cdd3de # bold color
-    put_template_custom Pj 37474f # selection color
-    put_template_custom Pk cdd3de # selected text color
-    put_template_custom Pl cdd3de # cursor
+    put_template_custom Pi CDD3DE # bold color
+    put_template_custom Pj 37474F # selection color
+    put_template_custom Pk CDD3DE # selected text color
+    put_template_custom Pl CDD3DE # cursor
     put_template_custom Pm 263238 # cursor text
   else
     put_template_var 10 $colorfg
@@ -97,10 +97,10 @@ function base16-materia -d "Materia"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 37474f
+  set -U fish_color_autosuggestion 37474F
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 37474f
+  set -U fish_color_comment 37474F
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-materia -d "Materia"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param c9ccd3
+  set -U fish_color_param C9CCD3
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=37474f
-  set -U fish_color_selection white --bold --background=37474f
+  set -U fish_color_search_match bryellow --background=37474F
+  set -U fish_color_selection white --bold --background=37474F
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline

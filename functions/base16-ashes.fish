@@ -3,28 +3,28 @@
 # Ashes scheme by Jannik Siebert (https://github.com/janniks)
 
 function base16-ashes -d "Ashes"
-  set color00 1c/20/23 # Base 00 - Black
-  set color01 c7/ae/95 # Base 08 - Red
-  set color02 95/c7/ae # Base 0B - Green
-  set color03 ae/c7/95 # Base 0A - Yellow
-  set color04 ae/95/c7 # Base 0D - Blue
-  set color05 c7/95/ae # Base 0E - Magenta
-  set color06 95/ae/c7 # Base 0C - Cyan
-  set color07 c7/cc/d1 # Base 05 - White
-  set color08 74/7c/84 # Base 03 - Bright Black
+  set color00 1C/20/23 # Base 00 - Black
+  set color01 C7/AE/95 # Base 08 - Red
+  set color02 95/C7/AE # Base 0B - Green
+  set color03 AE/C7/95 # Base 0A - Yellow
+  set color04 AE/95/C7 # Base 0D - Blue
+  set color05 C7/95/AE # Base 0E - Magenta
+  set color06 95/AE/C7 # Base 0C - Cyan
+  set color07 C7/CC/D1 # Base 05 - White
+  set color08 74/7C/84 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 f3/f4/f5 # Base 07 - Bright White
-  set color16 c7/c7/95 # Base 09
-  set color17 c7/95/95 # Base 0F
-  set color18 39/3f/45 # Base 01
-  set color19 56/5e/65 # Base 02
-  set color20 ad/b3/ba # Base 04
-  set color21 df/e2/e5 # Base 06
+  set color15 F3/F4/F5 # Base 07 - Bright White
+  set color16 C7/C7/95 # Base 09
+  set color17 C7/95/95 # Base 0F
+  set color18 39/3F/45 # Base 01
+  set color19 56/5E/65 # Base 02
+  set color20 AD/B3/BA # Base 04
+  set color21 DF/E2/E5 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-ashes -d "Ashes"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg c7ccd1 # foreground
-    put_template_custom Ph 1c2023 # background
-    put_template_custom Pi c7ccd1 # bold color
-    put_template_custom Pj 565e65 # selection color
-    put_template_custom Pk c7ccd1 # selected text color
-    put_template_custom Pl c7ccd1 # cursor
-    put_template_custom Pm 1c2023 # cursor text
+    put_template_custom Pg C7CCD1 # foreground
+    put_template_custom Ph 1C2023 # background
+    put_template_custom Pi C7CCD1 # bold color
+    put_template_custom Pj 565E65 # selection color
+    put_template_custom Pk C7CCD1 # selected text color
+    put_template_custom Pl C7CCD1 # cursor
+    put_template_custom Pm 1C2023 # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-ashes -d "Ashes"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 565e65
+  set -U fish_color_autosuggestion 565E65
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 565e65
+  set -U fish_color_comment 565E65
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-ashes -d "Ashes"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param adb3ba
+  set -U fish_color_param ADB3BA
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=565e65
-  set -U fish_color_selection white --bold --background=565e65
+  set -U fish_color_search_match bryellow --background=565E65
+  set -U fish_color_selection white --bold --background=565E65
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -128,7 +128,7 @@ function base16-ashes -d "Ashes"
   set -U base16_theme ashes
 
   # write ~/.vimrc_background
-  __base16_fish_shell_set_background "1c" "20" "23"
+  __base16_fish_shell_set_background "1C" "20" "23"
   __base16_fish_shell_create_vimrc_background ashes
 
   # clean up

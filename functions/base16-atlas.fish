@@ -11,7 +11,7 @@ function base16-atlas -d "Atlas"
   set color05 9a/70/a4 # Base 0E - Magenta
   set color06 14/74/7e # Base 0C - Cyan
   set color07 a1/a1/9a # Base 05 - White
-  set color08 6c/8b/91 # Base 03 - Bright Black
+  set color08 6C/8B/91 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
@@ -22,7 +22,7 @@ function base16-atlas -d "Atlas"
   set color16 f0/8e/48 # Base 09
   set color17 c4/30/60 # Base 0F
   set color18 00/38/4d # Base 01
-  set color19 51/7f/8d # Base 02
+  set color19 51/7F/8D # Base 02
   set color20 86/96/96 # Base 04
   set color21 e6/e6/dc # Base 06
   set colorfg $color07 # Base 05 - White
@@ -81,7 +81,7 @@ function base16-atlas -d "Atlas"
     put_template_custom Pg a1a19a # foreground
     put_template_custom Ph 002635 # background
     put_template_custom Pi a1a19a # bold color
-    put_template_custom Pj 517f8d # selection color
+    put_template_custom Pj 517F8D # selection color
     put_template_custom Pk a1a19a # selected text color
     put_template_custom Pl a1a19a # cursor
     put_template_custom Pm 002635 # cursor text
@@ -97,10 +97,10 @@ function base16-atlas -d "Atlas"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 517f8d
+  set -U fish_color_autosuggestion 517F8D
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 517f8d
+  set -U fish_color_comment 517F8D
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -114,8 +114,8 @@ function base16-atlas -d "Atlas"
   set -U fish_color_param 869696
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=517f8d
-  set -U fish_color_selection white --bold --background=517f8d
+  set -U fish_color_search_match bryellow --background=517F8D
+  set -U fish_color_selection white --bold --background=517F8D
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
