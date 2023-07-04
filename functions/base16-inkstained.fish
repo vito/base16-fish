@@ -3,28 +3,28 @@
 # Inkstained scheme by yuttie
 
 function base16-inkstained -d "Inkstained"
-  set color00 69/73/83 # Base 00 - Black
+  set color00 E7/E5/E2 # Base 00 - Black
   set color01 aa/58/6e # Base 08 - Red
   set color02 8c/a3/68 # Base 0B - Green
   set color03 ca/ac/67 # Base 0A - Yellow
   set color04 75/93/bb # Base 0D - Blue
   set color05 b0/78/9b # Base 0E - Magenta
   set color06 5e/99/b1 # Base 0C - Cyan
-  set color07 d3/d1/cc # Base 05 - White
-  set color08 00/ff/00 # Base 03 - Bright Black
+  set color07 7F/85/90 # Base 05 - White
+  set color08 A8/AC/B1 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 e7/e5/e2 # Base 07 - Bright White
+  set color15 55/5F/6F # Base 07 - Bright White
   set color16 c1/6c/82 # Base 09
   set color17 91/a8/c9 # Base 0F
-  set color18 92/9c/ad # Base 01
-  set color19 ff/00/00 # Base 02
-  set color20 00/00/ff # Base 04
-  set color21 e7/e5/e2 # Base 06
+  set color18 D2/D2/D2 # Base 01
+  set color19 BD/BF/C1 # Base 02
+  set color20 94/98/A0 # Base 04
+  set color21 6A/72/7F # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-inkstained -d "Inkstained"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg d3d1cc # foreground
-    put_template_custom Ph 697383 # background
-    put_template_custom Pi d3d1cc # bold color
-    put_template_custom Pj ff0000 # selection color
-    put_template_custom Pk d3d1cc # selected text color
-    put_template_custom Pl d3d1cc # cursor
-    put_template_custom Pm 697383 # cursor text
+    put_template_custom Pg 7F8590 # foreground
+    put_template_custom Ph E7E5E2 # background
+    put_template_custom Pi 7F8590 # bold color
+    put_template_custom Pj BDBFC1 # selection color
+    put_template_custom Pk 7F8590 # selected text color
+    put_template_custom Pl 7F8590 # cursor
+    put_template_custom Pm E7E5E2 # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-inkstained -d "Inkstained"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion ff0000
+  set -U fish_color_autosuggestion BDBFC1
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment ff0000
+  set -U fish_color_comment BDBFC1
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-inkstained -d "Inkstained"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 0000ff
+  set -U fish_color_param 9498A0
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=ff0000
-  set -U fish_color_selection white --bold --background=ff0000
+  set -U fish_color_search_match bryellow --background=BDBFC1
+  set -U fish_color_selection white --bold --background=BDBFC1
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -128,7 +128,7 @@ function base16-inkstained -d "Inkstained"
   set -U base16_theme inkstained
 
   # write ~/.vimrc_background
-  __base16_fish_shell_set_background "69" "73" "83"
+  __base16_fish_shell_set_background "E7" "E5" "E2"
   __base16_fish_shell_create_vimrc_background inkstained
 
   # clean up
