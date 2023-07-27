@@ -1,30 +1,30 @@
 # base16-fish (https://github.com/tomyun/base16-fish)
 # based on base16-shell (https://github.com/chriskempson/base16-shell)
-# Vice Alt scheme by Thomas Leon Highbaugh
+# Tokyonight scheme by Folke Lemaitre (https://github.com/folke)
 
-function base16-vice-alt -d "Vice Alt"
-  set color00 1c/1c/1c # Base 00 - Black
-  set color01 ff/3d/81 # Base 08 - Red
-  set color02 44/ff/dd # Base 0B - Green
-  set color03 ff/ff/73 # Base 0A - Yellow
-  set color04 2f/b1/d4 # Base 0D - Blue
-  set color05 82/65/ff # Base 0E - Magenta
-  set color06 00/ca/ff # Base 0C - Cyan
-  set color07 55/55/55 # Base 05 - White
-  set color08 32/32/32 # Base 03 - Bright Black
+function base16-tokyonight -d "Tokyonight"
+  set color00 24/28/3b # Base 00 - Black
+  set color01 f7/76/8e # Base 08 - Red
+  set color02 9e/ce/6a # Base 0B - Green
+  set color03 e0/af/68 # Base 0A - Yellow
+  set color04 41/a6/b5 # Base 0D - Blue
+  set color05 bb/9a/f7 # Base 0E - Magenta
+  set color06 1a/bc/9c # Base 0C - Cyan
+  set color07 c0/ca/f5 # Base 05 - White
+  set color08 56/5f/89 # Base 03 - Bright Black
   set color09 $color01 # Base 08 - Bright Red
   set color10 $color02 # Base 0B - Bright Green
   set color11 $color03 # Base 0A - Bright Yellow
   set color12 $color04 # Base 0D - Bright Blue
   set color13 $color05 # Base 0E - Bright Magenta
   set color14 $color06 # Base 0C - Bright Cyan
-  set color15 d1/d1/d1 # Base 07 - Bright White
-  set color16 F6/75/44 # Base 09
-  set color17 F8/3D/80 # Base 0F
-  set color18 28/28/28 # Base 01
-  set color19 2c/2c/2c # Base 02
-  set color20 3c/3c/3c # Base 04
-  set color21 b6/b6/b6 # Base 06
+  set color15 c0/ca/f5 # Base 07 - Bright White
+  set color16 ff/9e/64 # Base 09
+  set color17 ff/00/7c # Base 0F
+  set color18 1f/23/35 # Base 01
+  set color19 29/2e/42 # Base 02
+  set color20 a9/b1/d6 # Base 04
+  set color21 c0/ca/f5 # Base 06
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
@@ -78,13 +78,13 @@ function base16-vice-alt -d "Vice Alt"
   # foreground / background / cursor color
   if test -n "$ITERM_SESSION_ID"
     # iTerm2 proprietary escape codes
-    put_template_custom Pg 555555 # foreground
-    put_template_custom Ph 1c1c1c # background
-    put_template_custom Pi 555555 # bold color
-    put_template_custom Pj 2c2c2c # selection color
-    put_template_custom Pk 555555 # selected text color
-    put_template_custom Pl 555555 # cursor
-    put_template_custom Pm 1c1c1c # cursor text
+    put_template_custom Pg c0caf5 # foreground
+    put_template_custom Ph 24283b # background
+    put_template_custom Pi c0caf5 # bold color
+    put_template_custom Pj 292e42 # selection color
+    put_template_custom Pk c0caf5 # selected text color
+    put_template_custom Pl c0caf5 # cursor
+    put_template_custom Pm 24283b # cursor text
   else
     put_template_var 10 $colorfg
     if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
@@ -97,10 +97,10 @@ function base16-vice-alt -d "Vice Alt"
   end
 
   # set syntax highlighting colors
-  set -U fish_color_autosuggestion 2c2c2c
+  set -U fish_color_autosuggestion 292e42
   set -U fish_color_cancel -r
   set -U fish_color_command green #white
-  set -U fish_color_comment 2c2c2c
+  set -U fish_color_comment 292e42
   set -U fish_color_cwd green
   set -U fish_color_cwd_root red
   set -U fish_color_end brblack #blue
@@ -111,11 +111,11 @@ function base16-vice-alt -d "Vice Alt"
   set -U fish_color_match --background=brblue
   set -U fish_color_normal normal
   set -U fish_color_operator blue #green
-  set -U fish_color_param 3c3c3c
+  set -U fish_color_param a9b1d6
   set -U fish_color_quote yellow #brblack
   set -U fish_color_redirection cyan
-  set -U fish_color_search_match bryellow --background=2c2c2c
-  set -U fish_color_selection white --bold --background=2c2c2c
+  set -U fish_color_search_match bryellow --background=292e42
+  set -U fish_color_selection white --bold --background=292e42
   set -U fish_color_status red
   set -U fish_color_user brgreen
   set -U fish_color_valid_path --underline
@@ -125,11 +125,11 @@ function base16-vice-alt -d "Vice Alt"
   set -U fish_pager_color_progress brwhite --background=cyan
 
   # remember current theme
-  set -U base16_theme vice-alt
+  set -U base16_theme tokyonight
 
   # write ~/.vimrc_background
-  __base16_fish_shell_set_background "1c" "1c" "1c"
-  __base16_fish_shell_create_vimrc_background vice-alt
+  __base16_fish_shell_set_background "24" "28" "3b"
+  __base16_fish_shell_create_vimrc_background tokyonight
 
   # clean up
   functions -e put_template put_template_var put_template_custom
